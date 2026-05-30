@@ -94,7 +94,7 @@ ul li::before{content:"\\25B8";color:#f472b6;position:absolute;left:0}
 .chart .axislabel{fill:#8b949e;font-size:15px;text-anchor:middle}
 table{border-collapse:collapse;font-size:1.3rem;width:100%}
 th,td{padding:.5rem 1rem;text-align:left;border-bottom:1px solid #21262d}
-th{color:#f472b6} td.num{text-align:right;font-variant-numeric:tabular-nums}
+th{color:#f472b6} td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 img.grid{width:100%;border-radius:10px;border:1px solid #21262d;background:#000}
 .cap{font-size:1.1rem;color:#8b949e;margin-top:.8rem}
 code{background:#161b22;padding:.15em .45em;border-radius:5px;font-size:.92em;color:#79c0ff}
@@ -187,7 +187,7 @@ def build():
 <section class="slide">
   <h2>Full Results</h2>
   <table>
-    <tr><th>Attack</th><th>&epsilon;</th><th>Acc. on adv. examples</th><th>ASR</th></tr>
+    <tr><th>Attack</th><th class='num'>&epsilon;</th><th class='num'>Acc. on adv. examples</th><th class='num'>ASR</th></tr>
     {trows}
   </table>
   <p class="cap">At &epsilon;=0.3, I-FGSM drives model accuracy to 0.05% (ASR 99.95%).</p>
